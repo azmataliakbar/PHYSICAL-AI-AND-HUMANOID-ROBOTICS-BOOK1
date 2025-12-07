@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physical AI & Humanoid Robotics - Complete Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search by page number or topic...">
+        <button id="searchBtn">Go</button>
+    </div>
+
+    <!-- Chat Box -->
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+            <h3>Book Assistant</h3>
+            <button id="closeChat">×</button>
+        </div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input-container">
+            <input type="text" id="chatInput" placeholder="Ask about any topic...">
+            <button id="sendChat">Send</button>
+        </div>
+    </div>
+    <button class="chat-toggle" id="chatToggle">💬</button>
+
+    <!-- Book Container -->
+    <div class="book-container">
+        
+        <!-- Page 1: Cover Page -->
+        <div class="page cover-page" data-page="1">
+            <div class="page-content">
+                <div class="cover-image-placeholder">
+                    <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800" alt="Humanoid Robot" class="cover-img">
+                </div>
+                <div class="cover-text">
+                    <h1 class="typing-text" id="mainTitle">PHYSICAL AI AND HUMANOID ROBOTICS</h1>
+                    <h2 class="typing-text-delay" id="subtitle">A Complete Guide for Students</h2>
+                    <p class="typing-text-delay-2" id="author">By Azmat Ali</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 2: Welcome Introduction -->
+        <div class="page" data-page="2">
+            <div class="page-content">
+                <div class="page-image">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800" alt="AI Robot">
+                </div>
+                <h2 class="chapter-title">Welcome to Physical AI & Humanoid Robotics</h2>
+                <div class="content-text">
+                    <p>Welcome, future roboticists and AI enthusiasts! This book is your gateway to understanding one of the most exciting and rapidly evolving fields in technology today.</p>
+                    
+                    <h3>What is Physical AI?</h3>
+                    <p><strong>Physical AI</strong> refers to artificial intelligence systems that exist and operate in the physical world. Unlike traditional AI that works with data and software, Physical AI involves robots and machines that can perceive, think, and act in real environments. These systems combine:</p>
+                    <ul>
+                        <li>Advanced sensors to understand their surroundings</li>
+                        <li>Intelligent algorithms to make decisions</li>
+                        <li>Physical actuators to interact with the world</li>
+                    </ul>
+
+                    <h3>What is Humanoid Robotics?</h3>
+                    <p><strong>Humanoid robotics</strong> is the branch of robotics focused on creating robots that resemble and mimic human form and behavior. These robots have:</p>
+                    <ul>
+                        <li>Human-like body structure (head, torso, arms, legs)</li>
+                        <li>Ability to walk, manipulate objects, and interact naturally</li>
+                        <li>Potential to work alongside humans in various environments</li>
+                    </ul>
+
+                    <h3>Why This Field Matters</h3>
+                    <p>The combination of Physical AI and humanoid robotics is revolutionizing industries from healthcare to manufacturing, from space exploration to everyday assistance. These technologies promise to:</p>
+                    <ul>
+                        <li>Enhance human capabilities and safety</li>
+                        <li>Perform tasks in dangerous or inaccessible environments</li>
+                        <li>Provide companionship and assistance to those in need</li>
+                        <li>Advance our understanding of intelligence and embodiment</li>
+                    </ul>
+
+                    <h3>How This Book Helps</h3>
+                    <p>This book is designed specifically for beginners. We break down complex concepts into easy-to-understand explanations, use clear diagrams, and provide practical examples. No prior robotics experience is required!</p>
+
+                    <h3>Learning Outcomes</h3>
+                    <p>By the end of this book, you will:</p>
+                    <ul>
+                        <li>Understand the fundamentals of Physical AI and humanoid robotics</li>
+                        <li>Know the key components and systems that make robots work</li>
+                        <li>Be familiar with AI techniques used in robotics</li>
+                        <li>Understand real-world applications and future directions</li>
+                        <li>Be ready to start your own robotics projects</li>
+                    </ul>
+
+                    <p class="welcome-ending"><strong>Let's begin our journey into the future of intelligent machines.</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 3: Table of Contents -->
+        <div class="page" data-page="3">
+            <div class="page-content">
+                <h2 class="chapter-title">Table of Contents</h2>
+                <div class="toc-content">
+                    <div class="toc-item"><span class="toc-number">1.</span> <a href="#page-4">Introduction to Physical AI</a> <span class="page-num">Page 4</span></div>
+                    <div class="toc-item"><span class="toc-number">2.</span> <a href="#page-5">History & Evolution of Robotics</a> <span class="page-num">Page 5</span></div>
+                    <div class="toc-item"><span class="toc-number">3.</span> <a href="#page-6">Types of Robots</a> <span class="page-num">Page 6</span></div>
+                    <div class="toc-item"><span class="toc-number">4.</span> <a href="#page-7">Categories of Robots (Detailed)</a> <span class="page-num">Page 7</span></div>
+                    <div class="toc-item"><span class="toc-number">5.</span> <a href="#page-8">Humanoid Robot Structure</a> <span class="page-num">Page 8</span></div>
+                    <div class="toc-item"><span class="toc-number">6.</span> <a href="#page-9">Mechanical Foundations</a> <span class="page-num">Page 9</span></div>
+                    <div class="toc-item"><span class="toc-number">7.</span> <a href="#page-10">Actuators, Motors & Power Systems</a> <span class="page-num">Page 10</span></div>
+                    <div class="toc-item"><span class="toc-number">8.</span> <a href="#page-11">Sensors & Perception Systems</a> <span class="page-num">Page 11</span></div>
+                    <div class="toc-item"><span class="toc-number">9.</span> <a href="#page-12">Robot Control Systems</a> <span class="page-num">Page 12</span></div>
+                    <div class="toc-item"><span class="toc-number">10.</span> <a href="#page-13">Vision, Tactile, and Force Sensing</a> <span class="page-num">Page 13</span></div>
+                    <div class="toc-item"><span class="toc-number">11.</span> <a href="#page-14">AI for Physical Robots</a> <span class="page-num">Page 14</span></div>
+                    <div class="toc-item"><span class="toc-number">12.</span> <a href="#page-15">Reinforcement Learning for Robots</a> <span class="page-num">Page 15</span></div>
+                    <div class="toc-item"><span class="toc-number">13.</span> <a href="#page-16">Language + Vision + Action Systems</a> <span class="page-num">Page 16</span></div>
+                    <div class="toc-item"><span class="toc-number">14.</span> <a href="#page-17">Digital Twins & Simulation</a> <span class="page-num">Page 17</span></div>
+                    <div class="toc-item"><span class="toc-number">15.</span> <a href="#page-18">Human-Robot Interaction</a> <span class="page-num">Page 18</span></div>
+                    <div class="toc-item"><span class="toc-number">16.</span> <a href="#page-19">Safety, Ethics & Regulations</a> <span class="page-num">Page 19</span></div>
+                    <div class="toc-item"><span class="toc-number">17.</span> <a href="#page-20">Real-World Applications</a> <span class="page-num">Page 20</span></div>
+                    <div class="toc-item"><span class="toc-number">18.</span> <a href="#page-21">Future Directions & Research Roadmap</a> <span class="page-num">Page 21</span></div>
+                    <div class="toc-item"><span class="toc-number">19.</span> <a href="#page-22">Case Studies of Existing Humanoid Robots</a> <span class="page-num">Page 22</span></div>
+                    <div class="toc-item"><span class="toc-number">20.</span> <a href="#page-23">Summary & Final Thoughts</a> <span class="page-num">Page 23</span></div>
+                    <div class="toc-item"><span class="toc-number">21.</span> <a href="#page-24">Student Projects</a> <span class="page-num">Page 24</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 4: Introduction to Physical AI -->
+        <div class="page" data-page="4" id="page-4">
+            <div class="page-content">
+                <div class="page-image">
+                    <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?w=800" alt="Physical AI">
+                </div>
+                <h2 class="chapter-title">Chapter 1: Introduction to Physical AI</h2>
+                <div class="content-text">
+                    <p><strong>Physical AI</strong> represents the convergence of artificial intelligence with physical systems that can interact with the real world. Unlike traditional AI that processes data, Physical AI enables machines to perceive, reason, and act in physical environments.</p>
+                    
+                    <h3>Key Concepts</h3>
+                    <ul>
+                        <li><strong>Embodiment:</strong> AI systems that have physical bodies and can interact with the environment</li>
+                        <li><strong>Sensory-Motor Loop:</strong> Continuous cycle of sensing, processing, and acting</li>
+                        <li><strong>Real-Time Processing:</strong> Making decisions quickly enough to interact with dynamic environments</li>
+                        <li><strong>Robustness:</strong> Handling uncertainty and unexpected situations</li>
+                    </ul>
+
+                    <h3>Components of Physical AI</h3>
+                    <div class="diagram-box">
+                        <pre>
+    [Sensors] → [AI Brain] → [Actuators]
+       ↓            ↓            ↓
+    Perception → Decision → Action
+                        </pre>
+                    </div>
+
+                    <h3>Why Physical AI is Different</h3>
+                    <p>Traditional AI works with perfect data, but Physical AI must deal with:</p>
+                    <ul>
+                        <li>Noisy sensor data</li>
+                        <li>Unpredictable environments</li>
+                        <li>Physical constraints and limitations</li>
+                        <li>Real-time requirements</li>
+                    </ul>
+
+                    <div class="key-takeaways">
+                        <h3>Key Takeaways</h3>
+                        <ul>
+                            <li>Physical AI combines AI with physical systems</li>
+                            <li>It requires real-time perception, decision-making, and action</li>
+                            <li>Robustness and adaptability are crucial</li>
+                        </ul>
+                    </div>
+
+                    <div class="exercises">
+                        <h3>Student Exercises</h3>
+                        <ol>
+                            <li>What are the three main components of a Physical AI system?</li>
+                            <li>Explain why Physical AI is more challenging than traditional AI.</li>
+                            <li>Give an example of a Physical AI application in daily life.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 5: History & Evolution -->
+        <div class="page" data-page="5" id="page-5">
+            <div class="page-content">
+                <div class="page-image">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800" alt="Robot History">
+                </div>
+                <h2 class="chapter-title">Chapter 2: History & Evolution of Robotics</h2>
+                <div class="content-text">
+                    <p>The journey of robotics spans centuries, from ancient automata to modern humanoid robots.</p>
+                    
+                    <h3>Timeline of Robotics</h3>
+                    <table class="history-table">
+                        <tr>
+                            <th>Period</th>
+                            <th>Development</th>
+                        </tr>
+                        <tr>
+                            <td>Ancient Times</td>
+                            <td>Automata and mechanical devices (Greek water clocks, Chinese mechanical toys)</td>
+                        </tr>
+                        <tr>
+                            <td>1920s</td>
+                            <td>Term "robot" coined by Karel Čapek in play "R.U.R."</td>
+                        </tr>
+                        <tr>
+                            <td>1950s</td>
+                            <td>First programmable robots (Unimate - first industrial robot)</td>
+                        </tr>
+                        <tr>
+                            <td>1970s-80s</td>
+                            <td>Advancements in computer control and sensors</td>
+                        </tr>
+                        <tr>
+                            <td>1990s</td>
+                            <td>First humanoid robots (Honda's P2, P3)</td>
+                        </tr>
+                        <tr>
+                            <td>2000s</td>
+                            <td>ASIMO, AIBO, Roomba - robots enter daily life</td>
+                        </tr>
+                        <tr>
+                            <td>2010s-Present</td>
+                            <td>AI integration, Boston Dynamics robots, Tesla Optimus, advanced humanoids</td>
+                        </tr>
+                    </table>
+
+                    <h3>Key Milestones</h3>
+                    <ul>
+                        <li><strong>1961:</strong> Unimate - First industrial robot installed at GM</li>
+                        <li><strong>1996:</strong> Honda P2 - First humanoid robot to walk</li>
+                        <li><strong>2000:</strong> ASIMO - Advanced humanoid with dynamic walking</li>
+                        <li><strong>2013:</strong> Atlas - Boston Dynamics humanoid with advanced mobility</li>
+                        <li><strong>2022:</strong> Tesla Optimus - Consumer-focused humanoid robot</li>
+                    </ul>
+
+                    <div class="key-takeaways">
+                        <h3>Key Takeaways</h3>
+                        <ul>
+                            <li>Robotics has evolved from simple automata to intelligent systems</li>
+                            <li>Humanoid robotics is a relatively recent development</li>
+                            <li>AI integration is the current frontier</li>
+                        </ul>
+                    </div>
+
+                    <div class="exercises">
+                        <h3>Student Exercises</h3>
+                        <ol>
+                            <li>What was the first industrial robot and when was it created?</li>
+                            <li>Name three major humanoid robots and their contributions.</li>
+                            <li>How has AI changed robotics in recent years?</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 6: Types of Robots -->
+        <div class="page" data-page="6" id="page-6">
+            <div class="page-content">
+                <div class="page-image">
+                    <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800" alt="Robot Types">
+                </div>
+                <h2 class="chapter-title">Chapter 3: Types of Robots</h2>
+                <div class="content-text">
+                    <p>Robots come in many forms, each designed for specific tasks and environments. Here's an overview of the main types:</p>
+                    
+                    <div class="robot-type">
+                        <h3>1. Industrial Robots</h3>
+                        <p>Programmed machines used in manufacturing for tasks like welding, assembly, and material handling. They work in controlled environments and excel at repetitive, precise tasks.</p>
+                    </div>
+
+                    <div class="robot-type">
+                        <h3>2. Mobile Robots</h3>
+                        <p>Robots capable of moving through their environment using wheels, legs, or other locomotion methods. Examples include delivery robots, exploration rovers, and automated guided vehicles (AGVs).</p>
+                    </div>
+
+                    <div class="robot-type">
+                        <h3>3. Service Robots</h3>
+                        <p>Robots designed to assist humans in various service tasks. They work in hotels, restaurants, hospitals, and homes, performing cleaning, delivery, and assistance tasks.</p>
+                    </div>
+
+                    <div class="robot-type">
+                        <h3>4. Medical Robots</h3>
+                        <p>Specialized robots for healthcare applications including surgical robots (like da Vinci), rehabilitation robots, and telepresence robots for remote patient care.</p>
+                    </div>
+
+                    <div class="robot-type">
+                        <h3>5. Educational Robots</h3>
+                        <p>Robots designed for teaching and learning, such as LEGO Mindstorms, NAO robots, and TurtleBots. They help students learn programming, robotics, and AI concepts.</p>
+                    </div>
+
+                    <div class="robot-type">
+                        <h3>6. Military Robots</h3>
+                        <p>Robots used for defense and security purposes, including bomb disposal robots, surveillance drones, and autonomous vehicles. They operate in dangerous environments to protect human lives.</p>
+                    </div>
+
+                    <div class="robot-type">
+                        <h3>7. Social Robots</h3>
+                        <p>Robots designed to interact with humans socially and emotionally. Examples include Pepper, Jibo, and companion robots that provide social interaction and emotional support.</p>
+                    </div>
+
+                    <div class="robot-type">
+                        <h3>8. Humanoid Robots</h3>
+                        <p>Robots with human-like appearance and structure, including head, torso, arms, and legs. They can walk, manipulate objects, and interact naturally in human environments. Examples: ASIMO, Atlas, Optimus.</p>
+                    </div>
+
+                    <div class="robot-type">
+                        <h3>9. Companion Robots</h3>
+                        <p>Robots designed to provide companionship and emotional support, especially for elderly or isolated individuals. They can engage in conversation, play games, and monitor health.</p>
+                    </div>
+
+                    <div class="robot-type">
+                        <h3>10. AI-Driven Physical Robots (Physical AI)</h3>
+                        <p>Robots that combine advanced AI with physical capabilities. They can learn from experience, adapt to new situations, and make intelligent decisions in real-time. This represents the cutting edge of robotics.</p>
+                    </div>
+
+                    <div class="key-takeaways">
+                        <h3>Key Takeaways</h3>
+                        <ul>
+                            <li>Robots are categorized by their application and design</li>
+                            <li>Each type serves specific purposes and environments</li>
+                            <li>Physical AI represents the integration of AI with physical robots</li>
+                        </ul>
+                    </div>
+
+                    <div class="exercises">
+                        <h3>Student Exercises</h3>
+                        <ol>
+                            <li>What distinguishes humanoid robots from other robot types?</li>
+                            <li>Give examples of service robots you might encounter daily.</li>
+                            <li>How do AI-driven physical robots differ from traditional robots?</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 7: Categories of Robots (Detailed) -->
+        <div class="page" data-page="7" id="page-7">
+            <div class="page-content">
+                <div class="page-image">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800" alt="Robot Categories">
+                </div>
+                <h2 class="chapter-title">Chapter 4: Categories of Robots (Detailed)</h2>
+                <div class="content-text">
+                    <h3>1. Robotics Foundations</h3>
+                    <p>Fundamental principles including kinematics, dynamics, control theory, and mechanical design. Essential for understanding how robots move and interact with their environment.</p>
+                    <ul>
+                        <li>Forward and inverse kinematics</li>
+                        <li>Dynamics and motion planning</li>
+                        <li>Mechanical design principles</li>
+                    </ul>
+
+                    <h3>2. Control Systems</h3>
+                    <p>Methods for controlling robot motion and behavior, including PID control, adaptive control, and model-based control.</p>
+                    <ul>
+                        <li>Feedback control loops</li>
+                        <li>Trajectory planning</li>
+                        <li>Real-time control algorithms</li>
+                    </ul>
+
+                    <h3>3. Sensing & Perception</h3>
+                    <p>How robots perceive their environment using various sensors and process that information to understand the world.</p>
+                    <ul>
+                        <li>Vision systems (cameras, depth sensors)</li>
+                        <li>Tactile and force sensors</li>
+                        <li>Sensor fusion techniques</li>
+                    </ul>
+
+                    <h3>4. Simulation & Digital Twins</h3>
+                    <p>Virtual environments for testing and training robots before deployment, using tools like Unity, Gazebo, and NVIDIA Isaac.</p>
+                    <ul>
+                        <li>Physics simulation</li>
+                        <li>Digital twin technology</li>
+                        <li>Sim-to-real transfer</li>
+                    </ul>
+
+                    <h3>5. Embodied AI</h3>
+                    <p>AI systems that exist in physical bodies and learn through interaction with the environment.</p>
+                    <ul>
+                        <li>Embodied cognition</li>
+                        <li>Learning through interaction</li>
+                        <li>Physical intelligence</li>
+                    </ul>
+
+                    <div class="key-takeaways">
+                        <h3>Key Takeaways</h3>
+                        <ul>
+                            <li>Robotics spans multiple technical disciplines</li>
+                            <li>Each category builds on fundamental principles</li>
+                            <li>Integration of all categories creates complete systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 8: Humanoid Robot Structure -->
+        <div class="page" data-page="8" id="page-8">
+            <div class="page-content">
+                <div class="page-image">
+                    <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800" alt="Humanoid Structure">
+                </div>
+                <h2 class="chapter-title">Chapter 5: Humanoid Robot Structure</h2>
+                <div class="content-text">
+                    <p>Humanoid robots are designed to mimic human anatomy and movement capabilities.</p>
+                    
+                    <h3>Main Components</h3>
+                    <div class="diagram-box">
+                        <pre>
+        [Head]
+          ↓
+      [Torso]
+        ↙ ↘
+    [Arms] [Arms]
+        ↙ ↘
+    [Hands] [Hands]
+        ↙ ↘
+    [Legs] [Legs]
+        ↙ ↘
+    [Feet] [Feet]
+                        </pre>
+                    </div>
+
+                    <h3>1. Head</h3>
+                    <p>Contains cameras for vision, microphones for hearing, speakers for communication, and sometimes displays for expression.</p>
+
+                    <h3>2. Torso</h3>
+                    <p>Houses the main computer, power systems, and provides structural support. Contains the center of mass for balance.</p>
+
+                    <h3>3. Arms & Hands</h3>
+                    <p>Arms typically have 6-7 degrees of freedom. Hands have multiple fingers with joints for manipulation. End effectors can be grippers or human-like hands.</p>
+
+                    <h3>4. Legs & Feet</h3>
+                    <p>Legs provide locomotion with 6 degrees of freedom each. Feet have sensors for balance and contact detection. Walking requires complex balance control.</p>
+
+                    <h3>Degrees of Freedom (DoF)</h3>
+                    <p>A typical humanoid has 20-40+ degrees of freedom, allowing complex movements similar to humans.</p>
+
+                    <div class="key-takeaways">
+                        <h3>Key Takeaways</h3>
+                        <ul>
+                            <li>Humanoid structure mimics human anatomy</li>
+                            <li>Multiple degrees of freedom enable complex movement</li>
+                            <li>Balance and coordination are critical challenges</li>
+                        </ul>
+                    </div>
+
+                    <div class="exercises">
+                        <h3>Student Exercises</h3>
+                        <ol>
+                            <li>What are the main structural components of a humanoid robot?</li>
+                            <li>Why is balance control important for humanoid robots?</li>
+                            <li>How do degrees of freedom affect robot capabilities?</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 9: Mechanical Foundations -->
+        <div class="page" data-page="9" id="page-9">
+            <div class="page-content">
+                <div class="page-image">
+                    <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?w=800" alt="Mechanical Systems">
+                </div>
+                <h2 class="chapter-title">Chapter 6: Mechanical Foundations</h2>
+                <div class="content-text">
+                    <p>Mechanical design is the foundation of all robotic systems, determining how robots move and interact with the world.</p>
+                    
+                    <h3>Key Principles</h3>
+                    <ul>
+                        <li><strong>Strength:</strong> Components must withstand forces during operation</li>
+                        <li><strong>Weight:</strong> Lightweight design improves efficiency and mobility</li>
+                        <li><strong>Precision:</strong> Accurate manufacturing ensures reliable movement</li>
+                        <li><strong>Durability:</strong> Materials must last through repeated use</li>
+                    </ul>
+
+                    <h3>Common Materials</h3>
+                    <ul>
+                        <li><strong>Aluminum:</strong> Lightweight, strong, commonly used for frames</li>
+                        <li><strong>Carbon Fiber:</strong> Very light and strong, used in advanced robots</li>
+                        <li><strong>Steel:</strong> Heavy but extremely strong, used for joints and load-bearing parts</li>
+                        <li><strong>Plastics:</strong> Lightweight, used for covers and non-structural parts</li>
+                    </ul>
+
+                    <h3>Joint Types</h3>
+                    <ul>
+                        <li><strong>Revolute Joints:</strong> Rotational movement (like elbow)</li>
+                        <li><strong>Prismatic Joints:</strong> Linear movement (like sliding)</li>
+                        <li><strong>Spherical Joints:</strong> Multi-axis rotation (like shoulder)</li>
+                    </ul>
+
+                    <h3>Design Considerations</h3>
+                    <p>Engineers must balance:</p>
+                    <ul>
+                        <li>Power vs. weight</li>
+                        <li>Strength vs. flexibility</li>
+                        <li>Cost vs. performance</li>
+                        <li>Simplicity vs. capability</li>
+                    </ul>
+
+                    <div class="key-takeaways">
+                        <h3>Key Takeaways</h3>
+                        <ul>
+                            <li>Mechanical design determines robot capabilities</li>
+                            <li>Material selection is crucial for performance</li>
+                            <li>Trade-offs are necessary in design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 10: Actuators, Motors & Power -->
+        <div class="page" data-page="10" id="page-10">
+            <div class="page-content">
+                <div class="page-image">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800" alt="Actuators">
+                </div>
+                <h2 class="chapter-title">Chapter 7: Actuators, Motors & Power Systems</h2>
+                <div class="content-text">
+                    <p>Actuators are the "muscles" of robots, converting electrical energy into physical movement.</p>
+                    
+                    <h3>Types of Actuators</h3>
+                    
+                    <h4>1. Electric Motors</h4>
+                    <ul>
+                        <li><strong>DC Motors:</strong> Simple, reliable, used in many applications</li>
+                        <li><strong>Servo Motors:</strong> Precise position control with feedback</li>
+                        <li><strong>Stepper Motors:</strong> Precise step-by-step movement</li>
+                        <li><strong>Brushless DC:</strong> Efficient, high-performance motors</li>
+                    </ul>
+
+                    <h4>2. Hydraulic Actuators</h4>
+                    <p>Use pressurized fluid for very high force output. Used in large robots like Atlas.</p>
+
+                    <h4>3. Pneumatic Actuators</h4>
+                    <p>Use compressed air, lighter than hydraulic but less powerful.</p>
+
+                    <h4>4. Shape Memory Alloys</h4>
+                    <p>Materials that change shape with temperature, used in soft robotics.</p>
+
+                    <h3>Power Systems</h3>
+                    <ul>
+                        <li><strong>Batteries:</strong> Lithium-ion most common, balance capacity and weight</li>
+                        <li><strong>Power Management:</strong> Efficient distribution and regulation</li>
+                        <li><strong>Charging:</strong> Fast charging and wireless options</li>
+                    </ul>
+
+                    <h3>Gearboxes & Transmission</h3>
+                    <p>Gearboxes increase torque and control speed. Important for precise movement control.</p>
+
+                    <div class="key-takeaways">
+                        <h3>Key Takeaways</h3>
+                        <ul>
+                            <li>Actuators convert energy to movement</li>
+                            <li>Motor selection depends on application</li>
+                            <li>Power systems are critical for autonomy</li>
+                        </ul>
+                    </div>
+
+                    <div class="exercises">
+                        <h3>Student Exercises</h3>
+                        <ol>
+                            <li>What is the difference between a servo motor and a stepper motor?</li>
+                            <li>Why are batteries important for mobile robots?</li>
+                            <li>What factors determine actuator selection?</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 11: Sensors & Perception -->
+        <div class="page" data-page="11" id="page-11">
+            <div class="page-content">
+                <div class="page-image">
+                    <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?w=800" alt="Sensors">
+                </div>
+                <h2 class="chapter-title">Chapter 8: Sensors & Perception Systems</h2>
+                <div class="content-text">
+                    <p>Sensors are the "senses" of robots, allowing them to perceive their environment.</p>
+                    
+                    <h3>Vision Sensors</h3>
+                    <ul>
+                        <li><strong>RGB Cameras:</strong> Color images like human eyes</li>
+                        <li><strong>Depth Cameras:</strong> Measure distance (LiDAR, stereo vision)</li>
+                        <li><strong>Infrared:</strong> See in low light or detect heat</li>
+                    </ul>
+
+                    <h3>Proprioceptive Sensors</h3>
+                    <ul>
+                        <li><strong>Encoders:</strong> Measure joint angles and positions</li>
+                        <li><strong>IMU:</strong> Inertial measurement unit for orientation</li>
+                        <li><strong>Force/Torque Sensors:</strong> Measure forces at joints</li>
+                    </ul>
+
+                    <h3>Exteroceptive Sensors</h3>
+                    <ul>
+                        <li><strong>Ultrasonic:</strong> Distance measurement using sound</li>
+                        <li><strong>Touch Sensors:</strong> Detect contact and pressure</li>
+                        <li><strong>Microphones:</strong> Audio perception</li>
+                    </ul>
+
+                    <h3>Sensor Fusion</h3>
+                    <p>Combining data from multiple sensors provides more accurate and robust perception than any single sensor.</p>
+
+                    <div class="key-takeaways">
+                        <h3>Key Takeaways</h3>
+                        <ul>
+                            <li>Sensors enable robots to understand their environment</li>
+                            <li>Different sensors serve different purposes</li>
+                            <li>Sensor fusion improves reliability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 12: Control Systems -->
+        <div class="page" data-page="12" id="page-12">
+            <div class="page-content">
+                <div class="page-image">
+                    <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800" alt="Control">
+                </div>
+                <h2 class="chapter-title">Chapter 9: Robot Control Systems</h2>
+                <div class="content-text">
+                    <p>Control systems determine how robots move and respond to their environment.</p>
+                    
+                    <h3>Control Architectures</h3>
+                    <ul>
+                        <li><strong>Open-Loop:</strong> No feedback, simpler but less accurate</li>
+                        <li><strong>Closed-Loop:</strong> Uses feedback for correction</li>
+                        <li><strong>Hierarchical:</strong> Multiple levels of control</li>
+                    </ul>
+
+                    <h3>PID Control</h3>
+                    <p>Proportional-Integral-Derivative control is the most common feedback control method:</p>
+                    <ul>
+                        <li><strong>P (Proportional):</strong> Responds to current error</li>
+                        <li><strong>I (Integral):</strong> Corrects accumulated error</li>
+                        <li><strong>D (Derivative):</strong> Predicts future error</li>
+                    </ul>
+
+                    <h3>Motion Planning</h3>
+                    <p>Determines how to move from current position to goal while avoiding obstacles.</p>
+
+                    <h3>Real-Time Control</h3>
+                    <p>Control loops must run fast enough (typically 100-1000 Hz) to maintain stability and responsiveness.</p>
+
+                    <div class="key-takeaways">
+                        <h3>Key Takeaways</h3>
+                        <ul>
+                            <li>Control systems enable precise movement</li>
+                            <li>Feedback is essential for accuracy</li>
+                            <li>Real-time performance is critical</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 13: Vision, Tactile, Force Sensing -->
+        <div class="page" data-page="13" id="page-13">
+            <div class="page-content">
+                <div class="page-image">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800" alt="Sensing">
+                </div>
+                <h2 class="chapter-title">Chapter 10: Vision, Tactile, and Force Sensing</h2>
+                <div class="content-text">
+                    <h3>Computer Vision</h3>
+                    <p>Processing visual information to understand the environment:</p>
+                    <ul>
+                        <li><strong>Object Detection:</strong> Identifying and locating objects</li>
+                        <li><strong>Tracking:</strong> Following moving objects</li>
+                        <li><strong>Recognition:</strong> Classifying objects and scenes</li>
+                        <li><strong>Depth Estimation:</strong> Understanding 3D structure</li>
+                    </ul>
+
+                    <h3>Tactile Sensing</h3>
+                    <p>Touch sensors provide information about contact:</p>
+                    <ul>
+                        <li>Pressure distribution</li>
+                        <li>Texture and surface properties</li>
+                        <li>Slip detection</li>
+                        <li>Temperature sensing</li>
+                    </ul>
+
+                    <h3>Force Sensing</h3>
+                    <p>Measuring forces during manipulation:</p>
+                    <ul>
+                        <li>Contact forces</li>
+                        <li>Torque at joints</li>
+                        <li>Weight estimation</li>
+                        <li>Compliance control</li>
+                    </ul>
+
+                    <h3>Integration</h3>
+                    <p>Combining vision, touch, and force provides rich understanding for manipulation tasks.</p>
+
+                    <div class="key-takeaways">
+                        <h3>Key Takeaways</h3>
+                        <ul>
+                            <li>Multiple sensing modalities enhance capabilities</li>
+                            <li>Vision provides spatial understanding</li>
+                            <li>Tactile and force sensing enable manipulation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 14: AI for Physical Robots -->
+        <div class="page" data-page="14" id="page-14">
+            <div class="page-content">
+                <div class="page-image">
+                    <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?w=800" alt="AI Robotics">
+                </div>
+                <h2 class="chapter-title">Chapter 11: AI for Physical Robots</h2>
+                <div class="content-text">
+                    <p>Artificial Intelligence enables robots to learn, adapt, and make intelligent decisions.</p>
+                    
+                    <h3>Machine Learning in Robotics</h3>
+                    <ul>
+                        <li><strong>Supervised Learning:</strong> Learning from labeled examples</li>
+                        <li><strong>Unsupervised Learning:</strong> Finding patterns in data</li>
+                        <li><strong>Reinforcement Learning:</strong> Learning through trial and error</li>
+                    </ul>
+
+                    <h3>Neural Networks</h3>
+                    <p>Deep learning networks process sensor data and control robot actions:</p>
+                    <ul>
+                        <li>Convolutional Neural Networks (CNNs) for vision</li>
+                        <li>Recurrent Neural Networks (RNNs) for sequences</li>
+                        <li>Transformers for complex reasoning</li>
+                    </ul>
+
+                    <h3>Planning & Decision Making</h3>
+                    <ul>
+                        <li>Path planning algorithms</li>
+                        <li>Task planning and scheduling</li>
+                        <li>Multi-agent coordination</li>
+                    </ul>
+
+                    <h3>Adaptive Control</h3>
+                    <p>AI enables robots to adapt to changing conditions and learn from experience.</p>
+
+                    <div class="key-takeaways">
+                        <h3>Key Takeaways</h3>
+                        <ul>
+                            <li>AI enables intelligent robot behavior</li>
+                            <li>Machine learning improves with experience</li>
+                            <li>Multiple AI techniques work together</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 15: Reinforcement Learning -->
+        <div class="page" data-page="15" id="page-15">
+            <div class="page-content">
+                <div class="page-image">
+                    <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800" alt="RL">
+                </div>
+                <h2 class="chapter-title">Chapter 12: Reinforcement Learning for Robots</h2>
+                <div class="content-text">
+                    <p>Reinforcement Learning (RL) allows robots to learn optimal behaviors through interaction.</p>
+                    
+                    <h3>RL Basics</h3>
+                    <p>Agent learns by:</p>
+                    <ul>
+                        <li>Taking actions in an environment</li>
+                        <li>Receiving rewards or penalties</li>
+                        <li>Learning to maximize cumulative reward</li>
+                    </ul>
+
+                    <h3>Key Concepts</h3>
+                    <ul>
+                        <li><strong>State:</strong> Current situation</li>
+                        <li><strong>Action:</strong> What the robot does</li>
+                        <li><strong>Reward:</strong> Feedback signal</li>
+                        <li><strong>Policy:</strong> Strategy for choosing actions</li>
+                    </ul>
+
+                    <h3>RL Algorithms</h3>
+                    <ul>
+                        <li><strong>Q-Learning:</strong> Value-based learning</li>
+                        <li><strong>Policy Gradient:</strong> Direct policy optimization</li>
+                        <li><strong>Actor-Critic:</strong> Combines value and policy methods</li>
+                    </ul>
+
+                    <h3>Sim-to-Real Transfer</h3>
+                    <p>Training in simulation then transferring to real robots reduces cost and risk.</p>
+
+                    <div class="key-takeaways">
+                        <h3>Key Takeaways</h3>
+                        <ul>
+                            <li>RL enables learning from experience</li>
+                            <li>Simulation accelerates learning</li>
+                            <li>Transfer to real robots requires careful design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 16: Language + Vision + Action -->
+        <div class="page" data-page="16" id="page-16">
+            <div class="page-content">
+                <div class="page-image">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800" alt="Multimodal AI">
+                </div>
+                <h2 class="chapter-title">Chapter 13: Language + Vision + Action Systems</h2>
+                <div class="content-text">
+                    <p>Modern robots combine language understanding, vision, and action for natural human-robot interaction.</p>
+                    
+                    <h3>Multimodal AI</h3>
+                    <p>Integrating multiple input types:</p>
+                    <ul>
+                        <li><strong>Language:</strong> Understanding spoken or written commands</li>
+                        <li><strong>Vision:</strong> Seeing and understanding the environment</li>
+                        <li><strong>Action:</strong> Executing tasks based on understanding</li>
+                    </ul>
+
+                    <h3>Large Language Models (LLMs)</h3>
+                    <p>Advanced AI models enable robots to:</p>
+                    <ul>
+                        <li>Understand natural language instructions</li>
+                        <li>Plan complex tasks from descriptions</li>
+                        <li>Explain their actions</li>
+                        <li>Learn from verbal feedback</li>
+                    </ul>
+
+                    <h3>Vision-Language Models</h3>
+                    <p>Models that understand both images and text, enabling:</p>
+                    <ul>
+                        <li>Following visual-language instructions</li>
+                        <li>Describing what they see</li>
+                        <li>Answering questions about scenes</li>
+                    </ul>
+
+                    <h3>Embodied AI Agents</h3>
+                    <p>AI systems that can perceive, reason, and act in physical environments.</p>
+
+                    <div class="key-takeaways">
+                        <h3>Key Takeaways</h3>
+                        <ul>
+                            <li>Multimodal systems enable natural interaction</li>
+                            <li>LLMs provide language understanding</li>
+                            <li>Integration creates more capable robots</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 17: Digital Twins & Simulation -->
+        <div class="page" data-page="17" id="page-17">
+            <div class="page-content">
+                <div class="page-image">
+                    <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?w=800" alt="Simulation">
+                </div>
+                <h2 class="chapter-title">Chapter 14: Digital Twins & Simulation</h2>
+                <div class="content-text">
+                    <p>Simulation and digital twins enable safe, fast development and testing of robots.</p>
+                    
+                    <h3>Simulation Platforms</h3>
+                    
+                    <h4>Unity</h4>
+                    <p>Game engine adapted for robotics simulation with realistic physics and graphics.</p>
+
+                    <h4>Gazebo</h4>
+                    <p>Open-source physics simulator widely used in robotics research and education.</p>
+
+                    <h4>NVIDIA Isaac</h4>
+                    <p>High-performance simulation platform with GPU acceleration for fast training.</p>
+
+                    <h3>Digital Twins</h3>
+                    <p>Virtual replicas of physical robots that:</p>
+                    <ul>
+                        <li>Mirror real robot behavior</li>
+                        <li>Enable testing without risk</li>
+                        <li>Allow parallel development</li>
+                        <li>Support predictive maintenance</li>
+                    </ul>
+
+                    <h3>Sim-to-Real Transfer</h3>
+                    <p>Techniques to bridge the gap between simulation and reality:</p>
+                    <ul>
+                        <li>Domain randomization</li>
+                        <li>Reality gap minimization</li>
+                        <li>Progressive training</li>
+                    </ul>
+
+                    <div class="key-takeaways">
+                        <h3>Key Takeaways</h3>
+                        <ul>
+                            <li>Simulation accelerates development</li>
+                            <li>Digital twins enable safe testing</li>
+                            <li>Sim-to-real transfer is crucial</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 18: Human-Robot Interaction -->
+        <div class="page" data-page="18" id="page-18">
+            <div class="page-content">
+                <div class="page-image">
+                    <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800" alt="HRI">
+                </div>
+                <h2 class="chapter-title">Chapter 15: Human-Robot Interaction</h2>
+                <div class="content-text">
+                    <p>Effective interaction between humans and robots is essential for collaborative work.</p>
+                    
+                    <h3>Interaction Modalities</h3>
+                    <ul>
+                        <li><strong>Speech:</strong> Natural language communication</li>
+                        <li><strong>Gestures:</strong> Understanding human body language</li>
+                        <li><strong>Touch:</strong> Physical interaction and haptics</li>
+                        <li><strong>Visual:</strong> Eye contact, expressions, displays</li>
+                    </ul>
+
+                    <h3>Safety in HRI</h3>
+                    <ul>
+                        <li>Collision detection and avoidance</li>
+                        <li>Force limiting for safe contact</li>
+                        <li>Emergency stop mechanisms</li>
+                        <li>Predictable behavior</li>
+                    </ul>
+
+                    <h3>Trust & Transparency</h3>
+                    <p>Robots must be:</p>
+                    <ul>
+                        <li>Predictable in behavior</li>
+                        <li>Transparent about intentions</li>
+                        <li>Reliable and consistent</li>
+                        <li>Able to explain decisions</li>
+                    </ul>
+
+                    <h3>Social Robotics</h3>
+                    <p>Designing robots for social contexts requires understanding human psychology and social norms.</p>
+
+                    <div class="key-takeaways">
+                        <h3>Key Takeaways</h3>
+                        <ul>
+                            <li>Multiple interaction modes enhance usability</li>
+                            <li>Safety is paramount in HRI</li>
+                            <li>Trust enables effective collaboration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 19: Safety, Ethics & Regulations -->
+        <div class="page" data-page="19" id="page-19">
+            <div class="page-content">
+                <div class="page-image">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800" alt="Ethics">
+                </div>
+                <h2 class="chapter-title">Chapter 16: Safety, Ethics & Regulations</h2>
+                <div class="content-text">
+                    <p>As robots become more capable and widespread, safety, ethics, and regulation become critical.</p>
+                    
+                    <h3>Safety Standards</h3>
+                    <ul>
+                        <li>ISO standards for robot safety</li>
+                        <li>Risk assessment procedures</li>
+                        <li>Safety-rated components</li>
+                        <li>Emergency stop systems</li>
+                    </ul>
+
+                    <h3>Ethical Considerations</h3>
+                    <ul>
+                        <li><strong>Autonomy:</strong> How much decision-making should robots have?</li>
+                        <li><strong>Privacy:</strong> Data collection and surveillance concerns</li>
+                        <li><strong>Bias:</strong> Ensuring fair and unbiased AI systems</li>
+                        <li><strong>Job Displacement:</strong> Economic and social impacts</li>
+                        <li><strong>Weaponization:</strong> Military and security applications</li>
+                    </ul>
+
+                    <h3>Regulations</h3>
+                    <p>Governments are developing frameworks for:</p>
+                    <ul>
+                        <li>Robot certification</li>
+                        <li>Liability and responsibility</li>
+                        <li>Data protection</li>
+                        <li>International standards</li>
+                    </ul>
+
+                    <h3>Responsible Development</h3>
+                    <p>Developers must consider safety, ethics, and societal impact from the start.</p>
+
+                    <div class="key-takeaways">
+                        <h3>Key Takeaways</h3>
+                        <ul>
+                            <li>Safety must be designed in from the beginning</li>
+                            <li>Ethical considerations are complex and important</li>
+                            <li>Regulations are evolving to address new challenges</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 20: Real-World Applications -->
+        <div class="page" data-page="20" id="page-20">
+            <div class="page-content">
+                <div class="page-image">
+                    <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?w=800" alt="Applications">
+                </div>
+                <h2 class="chapter-title">Chapter 17: Real-World Applications of Humanoid Robots</h2>
+                <div class="content-text">
+                    <h3>Manufacturing & Industry</h3>
+                    <ul>
+                        <li>Assembly line work</li>
+                        <li>Quality inspection</li>
+                        <li>Material handling</li>
+                        <li>Collaborative manufacturing</li>
+                    </ul>
+
+                    <h3>Healthcare</h3>
+                    <ul>
+                        <li>Surgical assistance</li>
+                        <li>Rehabilitation therapy</li>
+                        <li>Elderly care and assistance</li>
+                        <li>Hospital logistics</li>
+                    </ul>
+
+                    <h3>Service Industries</h3>
+                    <ul>
+                        <li>Hotel and restaurant service</li>
+                        <li>Retail assistance</li>
+                        <li>Customer service</li>
+                        <li>Cleaning and maintenance</li>
+                    </ul>
+
+                    <h3>Education & Research</h3>
+                    <ul>
+                        <li>Teaching assistants</li>
+                        <li>Research platforms</li>
+                        <li>STEM education</li>
+                        <li>Human behavior studies</li>
+                    </ul>
+
+                    <h3>Space Exploration</h3>
+                    <ul>
+                        <li>Planetary exploration</li>
+                        <li>Space station maintenance</li>
+                        <li>Remote operations</li>
+                    </ul>
+
+                    <h3>Entertainment</h3>
+                    <ul>
+                        <li>Theme park attractions</li>
+                        <li>Performance art</li>
+                        <li>Interactive exhibits</li>
+                    </ul>
+
+                    <div class="key-takeaways">
+                        <h3>Key Takeaways</h3>
+                        <ul>
+                            <li>Humanoid robots have diverse applications</li>
+                            <li>They excel in human-centered environments</li>
+                            <li>New applications emerge continuously</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 21: Future Directions -->
+        <div class="page" data-page="21" id="page-21">
+            <div class="page-content">
+                <div class="page-image">
+                    <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800" alt="Future">
+                </div>
+                <h2 class="chapter-title">Chapter 18: Future Directions & Research Roadmap</h2>
+                <div class="content-text">
+                    <h3>Near-Term (1-5 years)</h3>
+                    <ul>
+                        <li>Improved dexterity and manipulation</li>
+                        <li>Better language understanding</li>
+                        <li>More robust locomotion</li>
+                        <li>Cost reduction for mass production</li>
+                    </ul>
+
+                    <h3>Medium-Term (5-10 years)</h3>
+                    <ul>
+                        <li>General-purpose humanoid robots</li>
+                        <li>Long-term autonomy</li>
+                        <li>Advanced learning capabilities</li>
+                        <li>Widespread deployment in homes and workplaces</li>
+                    </ul>
+
+                    <h3>Long-Term (10+ years)</h3>
+                    <ul>
+                        <li>Human-level dexterity and intelligence</li>
+                        <li>Seamless human-robot collaboration</li>
+                        <li>Self-improving and self-repairing robots</li>
+                        <li>Integration into all aspects of life</li>
+                    </ul>
+
+                    <h3>Key Research Areas</h3>
+                    <ul>
+                        <li>Embodied intelligence</li>
+                        <li>Multimodal learning</li>
+                        <li>Sim-to-real transfer</li>
+                        <li>Energy efficiency</li>
+                        <li>Safety and reliability</li>
+                    </ul>
+
+                    <div class="key-takeaways">
+                        <h3>Key Takeaways</h3>
+                        <ul>
+                            <li>Rapid progress is expected in coming years</li>
+                            <li>Multiple research directions are active</li>
+                            <li>Breakthroughs will enable new capabilities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 22: Case Studies -->
+        <div class="page" data-page="22" id="page-22">
+            <div class="page-content">
+                <div class="page-image">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800" alt="Case Studies">
+                </div>
+                <h2 class="chapter-title">Chapter 19: Case Studies of Existing Humanoid Robots</h2>
+                <div class="content-text">
+                    <h3>ASIMO (Honda)</h3>
+                    <p><strong>Developed:</strong> 2000-2018</p>
+                    <p><strong>Features:</strong> Dynamic walking, running, stair climbing, object manipulation</p>
+                    <p><strong>Impact:</strong> Pioneered humanoid locomotion research</p>
+
+                    <h3>Atlas (Boston Dynamics)</h3>
+                    <p><strong>Developed:</strong> 2013-present</p>
+                    <p><strong>Features:</strong> Parkour, backflips, advanced mobility, manipulation</p>
+                    <p><strong>Impact:</strong> Demonstrated extreme agility and robustness</p>
+
+                    <h3>Pepper (SoftBank Robotics)</h3>
+                    <p><strong>Developed:</strong> 2014-present</p>
+                    <p><strong>Features:</strong> Social interaction, emotion recognition, customer service</p>
+                    <p><strong>Impact:</strong> Commercial deployment in retail and hospitality</p>
+
+                    <h3>NAO (SoftBank Robotics)</h3>
+                    <p><strong>Developed:</strong> 2006-present</p>
+                    <p><strong>Features:</strong> Educational platform, programming, research</p>
+                    <p><strong>Impact:</strong> Widely used in education and research</p>
+
+                    <h3>Tesla Optimus</h3>
+                    <p><strong>Developed:</strong> 2022-present</p>
+                    <p><strong>Features:</strong> Consumer-focused design, AI integration, mass production goal</p>
+                    <p><strong>Impact:</strong> Bringing humanoids to consumer market</p>
+
+                    <h3>Digit (Agility Robotics)</h3>
+                    <p><strong>Developed:</strong> 2019-present</p>
+                    <p><strong>Features:</strong> Logistics and delivery, efficient locomotion</p>
+                    <p><strong>Impact:</strong> Commercial logistics applications</p>
+
+                    <div class="key-takeaways">
+                        <h3>Key Takeaways</h3>
+                        <ul>
+                            <li>Each robot demonstrates different capabilities</li>
+                            <li>Progress has been rapid over the past decades</li>
+                            <li>Commercial applications are emerging</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 23: Summary -->
+        <div class="page" data-page="23" id="page-23">
+            <div class="page-content">
+                <div class="page-image">
+                    <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?w=800" alt="Summary">
+                </div>
+                <h2 class="chapter-title">Chapter 20: Summary & Final Thoughts</h2>
+                <div class="content-text">
+                    <h3>What We've Learned</h3>
+                    <p>Throughout this book, we've explored the fascinating world of Physical AI and Humanoid Robotics:</p>
+                    <ul>
+                        <li>Fundamentals of Physical AI and how it differs from traditional AI</li>
+                        <li>History and evolution of robotics</li>
+                        <li>Types and categories of robots</li>
+                        <li>Mechanical, electrical, and software components</li>
+                        <li>AI techniques for robotics</li>
+                        <li>Real-world applications and future directions</li>
+                    </ul>
+
+                    <h3>Key Insights</h3>
+                    <ul>
+                        <li>Physical AI requires integration of perception, decision-making, and action</li>
+                        <li>Humanoid robots represent the convergence of multiple technologies</li>
+                        <li>Simulation and digital twins are essential for development</li>
+                        <li>Safety, ethics, and responsible development are crucial</li>
+                        <li>The field is rapidly advancing with exciting possibilities ahead</li>
+                    </ul>
+
+                    <h3>Continuing Your Journey</h3>
+                    <p>This book is just the beginning. To continue learning:</p>
+                    <ul>
+                        <li>Experiment with simulation platforms</li>
+                        <li>Join robotics communities and forums</li>
+                        <li>Work on projects and build your own robots</li>
+                        <li>Stay updated with latest research</li>
+                        <li>Consider formal education in robotics or AI</li>
+                    </ul>
+
+                    <h3>Final Message</h3>
+                    <p>The future of Physical AI and Humanoid Robotics is bright and full of possibilities. As you continue your journey, remember that every expert was once a beginner. Keep learning, experimenting, and contributing to this exciting field!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 24: Student Projects -->
+        <div class="page" data-page="24" id="page-24">
+            <div class="page-content">
+                <div class="page-image">
+                    <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800" alt="Projects">
+                </div>
+                <h2 class="chapter-title">Chapter 21: Student Projects</h2>
+                <div class="content-text">
+                    <h3>Mini Projects</h3>
+                    
+                    <div class="project-box">
+                        <h4>Project 1: Simulated Robot Arm</h4>
+                        <p><strong>Objective:</strong> Create a 3-DOF robot arm in simulation (Gazebo or Unity) that can pick and place objects.</p>
+                        <p><strong>Skills:</strong> Forward/inverse kinematics, control systems, simulation</p>
+                        <p><strong>Duration:</strong> 2-3 weeks</p>
+                    </div>
+
+                    <div class="project-box">
+                        <h4>Project 2: Vision-Based Object Detection</h4>
+                        <p><strong>Objective:</strong> Use a camera to detect and classify objects in real-time using computer vision.</p>
+                        <p><strong>Skills:</strong> Computer vision, machine learning, Python/OpenCV</p>
+                        <p><strong>Duration:</strong> 2 weeks</p>
+                    </div>
+
+                    <div class="project-box">
+                        <h4>Project 3: Simple Walking Robot</h4>
+                        <p><strong>Objective:</strong> Design and simulate a simple bipedal robot that can walk on flat terrain.</p>
+                        <p><strong>Skills:</strong> Gait planning, balance control, simulation</p>
+                        <p><strong>Duration:</strong> 3-4 weeks</p>
+                    </div>
+
+                    <div class="project-box">
+                        <h4>Project 4: Reinforcement Learning Controller</h4>
+                        <p><strong>Objective:</strong> Train an RL agent to control a robot in simulation using PyBullet or similar.</p>
+                        <p><strong>Skills:</strong> Reinforcement learning, Python, simulation</p>
+                        <p><strong>Duration:</strong> 3-4 weeks</p>
+                    </div>
+
+                    <div class="project-box">
+                        <h4>Project 5: Human-Robot Interface</h4>
+                        <p><strong>Objective:</strong> Create a system where a human can control a robot using voice commands or gestures.</p>
+                        <p><strong>Skills:</strong> Human-robot interaction, speech recognition, computer vision</p>
+                        <p><strong>Duration:</strong> 2-3 weeks</p>
+                    </div>
+
+                    <h3>Final Capstone Project</h3>
+                    <div class="project-box capstone">
+                        <h4>Design a Humanoid Robot Hand in Simulation</h4>
+                        <p><strong>Objective:</strong> Design, model, and simulate a humanoid robot hand capable of grasping various objects.</p>
+                        
+                        <h5>Requirements:</h5>
+                        <ul>
+                            <li>5-finger design with realistic joint structure</li>
+                            <li>Ability to grasp objects of different shapes and sizes</li>
+                            <li>Force feedback and tactile sensing simulation</li>
+                            <li>Control system for coordinated finger movement</li>
+                            <li>Demonstration of at least 3 different grasp types</li>
+                        </ul>
+
+                        <h5>Deliverables:</h5>
+                        <ul>
+                            <li>3D model of the hand</li>
+                            <li>Simulation environment setup</li>
+                            <li>Control algorithms</li>
+                            <li>Documentation and video demonstration</li>
+                            <li>Report analyzing design choices and performance</li>
+                        </ul>
+
+                        <p><strong>Skills Developed:</strong> Mechanical design, kinematics, control systems, simulation, project management</p>
+                        <p><strong>Duration:</strong> 8-10 weeks</p>
+                    </div>
+
+                    <h3>Resources</h3>
+                    <ul>
+                        <li>Gazebo Simulator: http://gazebosim.org</li>
+                        <li>Unity Robotics: https://github.com/Unity-Technologies</li>
+                        <li>PyBullet: https://pybullet.org</li>
+                        <li>ROS (Robot Operating System): https://www.ros.org</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Page: Closing -->
+        <div class="page" data-page="25" id="page-25">
+            <div class="page-content">
+                <div class="page-image">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800" alt="Future">
+                </div>
+                <h2 class="chapter-title">Congratulations!</h2>
+                <div class="content-text closing-page">
+                    <p class="large-text">🎉 You've completed your journey through Physical AI & Humanoid Robotics! 🎉</p>
+                    
+                    <h3>What You've Accomplished</h3>
+                    <p>You now have a solid foundation in:</p>
+                    <ul>
+                        <li>Understanding Physical AI and its applications</li>
+                        <li>Knowing the components and systems of humanoid robots</li>
+                        <li>Understanding AI techniques for robotics</li>
+                        <li>Recognizing real-world applications and future possibilities</li>
+                    </ul>
+
+                    <h3>Your Future in Robotics</h3>
+                    <p>The field of Physical AI and Humanoid Robotics is just beginning. You have the opportunity to:</p>
+                    <ul>
+                        <li>Contribute to groundbreaking research</li>
+                        <li>Build robots that help humanity</li>
+                        <li>Shape the future of human-robot collaboration</li>
+                        <li>Create technologies that were once science fiction</li>
+                    </ul>
+
+                    <h3>Keep Learning</h3>
+                    <p>Remember, learning is a continuous journey. Stay curious, keep experimenting, and never stop asking questions. The robots of tomorrow are being built by people like you today.</p>
+
+                    <h3>Final Words</h3>
+                    <p class="inspirational">The future of intelligent machines is in your hands. Go forth and create amazing things!</p>
+
+                    <p class="signature">— Azmat Ali</p>
+                    <p class="date">2025</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <button id="prevBtn">← Prev</button>
+        <span id="pageIndicator">Page 1 of 25</span>
+        <button id="nextBtn">Next →</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
